@@ -4,7 +4,7 @@ import Sidebar from '@/components/Sidebar'
 import Header from '@/components/Header'
 
 export const metadata: Metadata = {
-  title: 'Datum · Design System',
+  title: 'Sprue · Design System',
   description: 'Tokens, variables and components — crafted in Figma, documented for clarity.',
 }
 

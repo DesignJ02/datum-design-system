@@ -50,7 +50,7 @@ export default function Header() {
             flexShrink: 0,
           }}
         >
-          S
+          D
         </div>
         <span
           style={{
@@ -60,7 +60,7 @@ export default function Header() {
             letterSpacing: '-0.3px',
           }}
         >
-          Sprue
+          Datum
         </span>
       </Link>
 

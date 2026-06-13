@@ -26,7 +26,7 @@ export default function Home() {
         marginBottom: 32,
         textTransform: 'lowercase',
       }}>
-        sprue.
+        datum.
       </h1>
 
       <p style={{

@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 function TooltipPreview({ message = 'Helpful contextual information', theme = 'dark', placement = 'top' }: { message?: string; theme?: 'dark' | 'light'; placement?: 'top' | 'bottom' | 'left' | 'right' }) {

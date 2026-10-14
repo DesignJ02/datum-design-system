@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 type Props = { initials: string; size: 'small' | 'medium' | 'large'; shape: 'circle' | 'square'; status: 'online' | 'away' | 'offline' | 'busy' | 'none' }

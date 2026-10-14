@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const buttonTypes = ['primary', 'secondary', 'outline', 'ghost', 'danger'] as const

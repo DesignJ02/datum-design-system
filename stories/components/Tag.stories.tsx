@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const variants = ['brand', 'success', 'error', 'warning', 'default'] as const

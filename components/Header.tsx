@@ -8,6 +8,16 @@ export default function Header() {
   const isFoundations = pathname.startsWith('/foundations')
   const isComponents = pathname.startsWith('/components')
 
+  const navStyle = (active: boolean) => ({
+    padding: '6px 14px',
+    borderRadius: 8,
+    fontSize: 14,
+    fontWeight: active ? 600 : 400,
+    color: active ? '#fff' : 'rgba(255,255,255,0.5)',
+    background: active ? 'rgba(255,255,255,0.08)' : 'transparent',
+    transition: 'all 0.15s',
+  } as const)
+
   return (
     <header
       style={{
@@ -25,7 +35,6 @@ export default function Header() {
         zIndex: 100,
       }}
     >
-      {/* Logo */}
       <Link
         href="/"
         style={{
@@ -64,39 +73,24 @@ export default function Header() {
         </span>
       </Link>
 
-      {/* Nav */}
-      <nav style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-        <Link
-          href="/foundations/colors"
-          style={{
-            padding: '6px 14px',
-            borderRadius: 8,
-            fontSize: 14,
-            fontWeight: isFoundations ? 600 : 400,
-            color: isFoundations ? '#fff' : 'rgba(255,255,255,0.5)',
-            background: isFoundations ? 'rgba(255,255,255,0.08)' : 'transparent',
-            transition: 'all 0.15s',
-          }}
-        >
+      <nav aria-label="Main navigation" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+        <Link href="/foundations/colors" style={navStyle(isFoundations)}>
           Foundations
         </Link>
-        <Link
-          href="/components"
-          style={{
-            padding: '6px 14px',
-            borderRadius: 8,
-            fontSize: 14,
-            fontWeight: isComponents ? 600 : 400,
-            color: isComponents ? '#fff' : 'rgba(255,255,255,0.5)',
-            background: isComponents ? 'rgba(255,255,255,0.08)' : 'transparent',
-            transition: 'all 0.15s',
-          }}
-        >
+        <Link href="/components" style={navStyle(isComponents)}>
           Components
         </Link>
+        <a
+          href="https://designj02.github.io/datum-design-system/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={navStyle(false)}
+          aria-label="Open Storybook component explorer in a new tab"
+        >
+          Storybook ↗
+        </a>
       </nav>
 
-      {/* Version */}
       <div style={{ fontSize: 12, color: 'var(--text-dim)', fontFamily: 'var(--font-family-mono)' }}>
         v1.0
       </div>

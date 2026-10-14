@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 type Props = { title: string; description: string; actionLabel: string; tone: 'brand' | 'neutral' | 'success' }

@@ -4,21 +4,43 @@ import { Meta } from '@storybook/blocks'
 
 # Datum Design System
 
-Tokens, variables and components — built in Figma, documented for teams who care about consistency and craft.
+A practical, documented foundation for building clear, consistent digital products.
 
-Datum is a dark-first design system with a crimson brand accent, blue secondary accent, semantic status colors, and reusable interface components.
+Datum pairs a confident crimson brand with a cool blue secondary accent, a carefully named primitive palette, semantic color roles, and reusable typography, spacing, shape, and elevation tokens.
 
-## Foundations
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:12,margin:'28px 0'}}>
+  <div style={{background:'#FFFFFF',border:'1px solid #E8E8ED',borderRadius:14,padding:18}}>
+    <div style={{height:8,width:42,borderRadius:99,background:'#E72757',marginBottom:18}} />
+    <strong>Crimson</strong>
+    <p style={{color:'#666675',fontSize:13,marginTop:6}}>Brand identity and primary actions.</p>
+  </div>
+  <div style={{background:'#FFFFFF',border:'1px solid #E8E8ED',borderRadius:14,padding:18}}>
+    <div style={{height:8,width:42,borderRadius:99,background:'#1B92F3',marginBottom:18}} />
+    <strong>Selection blue</strong>
+    <p style={{color:'#666675',fontSize:13,marginTop:6}}>Secondary emphasis and selected states.</p>
+  </div>
+  <div style={{background:'#FFFFFF',border:'1px solid #E8E8ED',borderRadius:14,padding:18}}>
+    <div style={{height:8,width:42,borderRadius:99,background:'#19191F',marginBottom:18}} />
+    <strong>Neutral foundation</strong>
+    <p style={{color:'#666675',fontSize:13,marginTop:6}}>Readable content, structure, and calm surfaces.</p>
+  </div>
+</div>
 
-- **Color:** primitive palettes and semantic roles for surfaces, text, and borders.
-- **Typography:** General Sans for interface text and DM Mono for token names and code.
-- **Spacing and radius:** reusable values for layout rhythm and component shape.
-- **Elevation:** shadow tokens from subtle separation to prominent overlays.
+## Start with the foundations
 
-## Components
+- **Color system** — primitive palettes, semantic roles, usage guidance, and copyable values.
+- **Typography** — General Sans for interface text and DM Mono for token names and code.
+- **Spacing and sizing** — a shared scale for layout rhythm and component density.
+- **Radius and elevation** — shape and depth tokens that make components feel related.
+- **Components** — interactive examples with controls and implementation references.
 
-The initial library includes Button, Input, Checkbox, Radio Button, Toggle, Tag & Badge, Avatar, Tooltip, and Empty State.
+## Principles
+
+1. **Use semantic intent in product UI.** Choose a role such as text, surface, border, success, or error instead of picking a random swatch.
+2. **Create hierarchy with restraint.** Crimson is for emphasis; neutral surfaces and text should do most of the work.
+3. **Design for accessibility.** Validate contrast for the actual foreground/background pair, never assume a brand color is accessible on every surface.
+4. **Keep design and code aligned.** Token values shown here are sourced from the current Datum CSS variables; treat the stylesheet as the implementation source of truth.
 
 ## Using this Storybook
 
-Select a story from the left navigation. Use **Controls** to change supported properties, and switch to the **Docs** tab for API information. Stories are previews; keep production component implementations and token values aligned with the Datum source.
+Choose a topic in the left navigation. Open **Docs** for the narrative and references, and **Canvas** for interactive examples. Use controls to explore supported component states. Color swatches include copy actions where available.

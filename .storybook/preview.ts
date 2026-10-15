@@ -4,13 +4,14 @@ import '../app/globals.css'
 const preview: Preview = {
   parameters: {
     controls: { expanded: true },
-    layout: 'centered',
+    layout: 'padded',
     backgrounds: {
-      default: 'Datum canvas',
+      default: 'Datum paper',
       values: [
-        { name: 'Datum canvas', value: '#080808' },
-        { name: 'Component surface', value: '#131B2E' },
-        { name: 'Light', value: '#FFFFFF' },
+        { name: 'Datum paper', value: '#F8F8FA' },
+        { name: 'Surface', value: '#FFFFFF' },
+        { name: 'Soft grey', value: '#F3F3F3' },
+        { name: 'Ink', value: '#19191F' },
       ],
     },
     actions: { argTypesRegex: '^on[A-Z].*' },

@@ -1,6 +1,8 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 
+const paletteSteps = ['900', '800', '700', '600', '500', '400', '300', '200', '100', '50'] as const
+
 const palettes: Record<string, string[]> = {
   Crimson: ['#400C19', '#5A1123', '#73162E', '#A72042', '#E72757', '#E16181', '#E98CA3', '#F1B6C5', '#F5CCD6', '#F9E1E7'],
   'Selection Blue': ['#042C4E', '#06406F', '#07518D', '#0A72C7', '#1B92F3', '#55AEF6', '#86C5F9', '#B6DCFB', '#CFE8FC', '#E7F3FE'],
@@ -18,8 +20,8 @@ function ColorFoundations() {
       <h3 style={{ color: '#fff', fontSize: 16, marginBottom: 12 }}>{name}</h3>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, minmax(64px, 1fr))', gap: 8 }}>
         {colors.map((color, index) => <div key={color} style={{ minWidth: 0 }}>
-          <button onClick={() => navigator.clipboard?.writeText(color)} title={`Copy ${color}`} style={{ display: 'block', width: '100%', height: 52, borderRadius: 7, border: '1px solid rgba(255,255,255,.1)', background: color, cursor: 'copy' }} />
-          <div style={{ fontSize: 11, color: 'rgba(255,255,255,.45)', marginTop: 6, fontFamily: 'var(--font-family-mono)' }}>{index === 4 ? '500' : index < 4 ? String((9-index)*100) : String((9-index)*100)} · {color}</div>
+          <button onClick={() => navigator.clipboard?.writeText(color)} title={`Copy ${color}`} aria-label={`Copy ${name} ${paletteSteps[index]} color ${color}`} style={{ display: 'block', width: '100%', height: 52, borderRadius: 7, border: '1px solid rgba(255,255,255,.1)', background: color, cursor: 'copy' }} />
+          <div style={{ fontSize: 11, color: 'rgba(255,255,255,.45)', marginTop: 6, fontFamily: 'var(--font-family-mono)' }}>{paletteSteps[index]} · {color}</div>
         </div>)}
       </div>
     </section>)}

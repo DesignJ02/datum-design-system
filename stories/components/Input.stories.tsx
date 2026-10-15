@@ -13,8 +13,8 @@ function DatumInput({ label, placeholder, helperText, state, type }: InputProps)
   const [value, setValue] = useState('')
   const isError = state === 'error'
   return <div style={{ width: 320, fontFamily: 'var(--font-family-primary)' }}>
-    <label style={{ display: 'block', fontSize: 12, color: isError ? '#F65578' : 'rgba(255,255,255,.7)', marginBottom: 6 }}>{label}</label>
-    <input type={type} value={value} placeholder={placeholder} disabled={state === 'disabled'}
+    <label htmlFor={`datum-input-${state}-${type}`} style={{ display: 'block', fontSize: 12, color: isError ? '#F65578' : 'rgba(255,255,255,.7)', marginBottom: 6 }}>{label}</label>
+    <input id={`datum-input-${state}-${type}`} type={type} value={value} placeholder={placeholder} disabled={state === 'disabled'}
       onChange={event => setValue(event.target.value)}
       style={{
         boxSizing: 'border-box', width: '100%', background: state === 'disabled' ? 'rgba(255,255,255,.03)' : 'rgba(255,255,255,.06)',
